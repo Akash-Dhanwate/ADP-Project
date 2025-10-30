@@ -1,151 +1,342 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Multiverse | The World Beyond Worlds</title>
-    <link rel="stylesheet" href="style1.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="font-1.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Strange — Fan Page (Pushkar Bagade)</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      height: 72vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      background: url('https://wallpaperswide.com/download/doctor_strange-wallpaper-1366x768.jpg') center top/cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      z-index: 2;
+      margin: 0;
+      color: #ffa200;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 2;
+      font-size: 1.1rem;
+      margin-top: 12px;
+      color: #ccc;
+    }
+
+    /* ===== CARDS SECTION ===== */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .card {
+      background: rgba(20, 20, 20, 0.95);
+      padding: 20px;
+      border-radius: 15px;
+      width: 260px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: #00ff7f;
+      box-shadow: 0 0 15px #00ff7f;
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #ffa200;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* ===== INFO SECTIONS ===== */
+    .info-section {
+      display: none;
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.2);
+      animation: fade 0.4s ease;
+    }
+
+    .info-section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .info-section h3 {
+      color: #ffa200;
+      margin-bottom: 10px;
+    }
+
+    .info-section p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .info-section button {
+      background: #ff7b00;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 15px;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .info-section button:hover {
+      background: #ffa200;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.95);
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .about img {
+      width: 300px;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-right: 3px solid #ff7b00;
+    }
+
+    .about-content {
+      padding: 25px;
+      flex: 1;
+    }
+
+    .about-content h3 {
+      color: #ffa200;
+      margin-bottom: 10px;
+    }
+
+    .about-content p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .about-content button {
+      background: #ff7b00;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .about-content button:hover {
+      background: #ffa200;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+
+    .studio-tag {
+      background: #ff2a00;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    footer span {
+      color: #ff7b00;
+      font-weight: 600;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+
+      .about img {
+        border-right: none;
+        border-bottom: 3px solid #ff7b00;
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <!-- HEADER SECTION -->
-    <div class="container">
-        <header>
-            <!--LEFT PART OF HEADER (CONTAIN LOGO AND BUTTON)-->
-            <div class="head-left">
-                <img src="img/logo.png" alt="Logo">
-                <button>Join Now</button>
-            </div>
 
-            <!--RIGHT PART OF HEADER (CONTAIN CHARACTER BUTTONS)-->
-            <!-- TEAM MEMBER you need to change your name by your character name that you are selected and also update the links by your html file path links  -->
-            <div class="head-right">
-                <!-- Replace # with your actual page URLs -->
-                <p><a href="AKASH/akash.html">SPIDER-MAN</a></p>
-                <p><a href="OMKAR/omkar.html">OMKAR</a></p>
-                <p><a href="LOKESH/lokesh.html">LOKESH</a></p>
-                <p><a href="OM/om.html">OM</a></p>
-                <p><a href="PUSHKAR/pushkar.html">PUSHKAR</a></p>
-            </div>
-        </header>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <h1>DOCTOR STRANGE</h1>
+    <p>The Sorcerer Supreme — Master of the Mystic Arts and Guardian of Reality</p>
+  </section>
 
-        <!-- HERO SECTION -->
-        <section class="hero-section autoBlur">
-            <div class="hero-vid">
-                <video loop autoplay muted playsinline class="hero-video">
-                    <source src="videos/hero-1.mp4" type="video/mp4">
-                </video>
-
-                <!-- OVERLAY TEXT ON VIDEO -->
-                <div class="hero-info">
-                    <h1>PROJECT MULTIVERSE</h1>
-                    <p>The gateway to infinite realities — where heroes rise beyond limits.</p>
-                    <button>Enter the Multiverse</button>
-                </div>
-
-                <!-- <h1 class="gaming-text">Multiverse</h1> -->
-                <div class="next-btn">ENTER</div>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section id="about" class="about-section">
-            <p>Welcome to Project Multiverse</p>
-            <div class="autoBlur">
-                <h1>DISCOVER HEROES. EXPLORE DIMENSIONS. CHANGE REALITY.</h1>
-            </div>
-
-            <img class="stones-img" src="img/stones.png" alt="stones-image">
-
-            <div class="image-box autoTakeFull">
-                <img src="img/about.webp" alt="about-img">
-            </div>
-
-            <h4>The ultimate adventure begins — where every choice creates a new world.</h4>
-            <h5>
-                Project Multiverse brings together legendary heroes from parallel universes — 
-                each fighting to restore balance and protect existence itself.
-            </h5>
-        </section>
-
-        <!-- SECTION INFO (HERO CARDS) -->
-         <!-- every team member should put you character info here and also you need to put the videos or photos that relate to you character that you are selected  -->
-        <section class="section-info" id="card-sec">
-            <h3>Meet the Heroes of the Multiverse</h3>
-            <p>From hidden hackers to cosmic guardians — every hero carries a story that shapes the destiny of worlds.</p>
-<!-- TEAM MEMBERS ---< you need to update this section with your character info and also add the link and the videos in thet given spot  -->
-            <div class="info-cards">
-                <div class="card autoDisplay">
-                    <h1>SPIDER-MAN</h1>
-                    <p>With great power comes great responsibility - the legend of Spider-Man continues to inspire courage, sacrifice, and hope</p>
-                    <video src="videos/feature-1.mp4" autoplay loop muted plays-inline></video>
-                    <button onclick="window.location.href='../AKASH/akash.html'">view</button>
-                </div>
-
-                <div class="card autoDisplay">
-                    <h1>IRON MAN</h1>
-                    <p>A fearless warrior who hunts creatures from fractured worlds, restoring peace one battle at a time.</p>
-                    <video src="videos/feature-2.mp4" autoplay loop muted plays-inline></video>
-                    <button onclick="window.location.href='about.html'">view</button>
-                </div>
-
-                <div class="card autoDisplay">
-                    <h1>THOR</h1>
-                    <p>The light of the Multiverse — a being of pure energy who fights darkness across time and space.</p>
-                    <video src="videos/feature-3.mp4" autoplay loop muted plays-inline></video>
-                    <button onclick="window.location.href='about.html'">view</button>
-                </div>
-
-                <div class="card autoDisplay">
-                    <h1>DR.STRANGE</h1>
-                    <p>The light of the Multiverse — a being of pure energy who fights darkness across time and space.</p>
-                    <video src="videos/feature-4.mp4" autoplay loop muted plays-inline></video>
-                    <button onclick="window.location.href='about.html'">view</button>
-                </div>
-
-                <div class="card autoDisplay">
-                                        <h1>THOR..?</h1>
-                    <p>The light of the Multiverse — a being of pure energy who fights darkness across time and space.</p>
-                    <video src="videos/feature-5.mp4" autoplay loop muted plays-inline></video>
-                    <button onclick="window.location.href='about.html'">view</button>
-                </div>
-
-                <div class="card autoDisplay">
-                    <h1>More Heroes Coming Soon...</h1>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section class="contact-section">
-            <p>Join Project Multiverse Today</p>
-            <div class="autoBlur">
-                <h1>Be a Creator, Not Just a Player</h1>
-            </div>
-            <button>Join the Mission</button>
-
-            <img class="img1" src="img/swordman.webp" alt="contact-img">
-            <img class="img2" src="img/contact-1.webp" alt="contact-img">
-            <img class="img3" src="img/contact-2.webp" alt="contact-img">
-        </section>
-
-        <!-- FOOTER SECTION -->
-        <footer class="footer">
-            <p>© 2025 Project Multiverse | All Rights Reserved</p>
-            <ul class="footer-icons">
-                <li><a href="#" title="Akash"><i class='bx bx-wink-tongue'></i></a></li>
-                <li><a href="#" title="Omkar"><i class='bx bx-wink-tongue'></i></a></li>
-                <li><a href="#" title="Lokesh"><i class='bx bx-wink-tongue'></i></a></li>
-                <li><a href="#" title="Om"><i class='bx bx-wink-tongue'></i></a></li>
-                <li><a href="#" title="Pushkar"><i class='bx bx-wink-tongue'></i></a></li>
-            </ul>
-        </footer>
+  <!-- ===== CARDS ===== -->
+  <div class="cards">
+    <div class="card" onclick="toggleSection('powers')">
+      <h3>Powers</h3>
+      <p>Arcane spells, portals, shields, and astral projection — the magic of the Mystic Arts.</p>
     </div>
+    <div class="card" onclick="toggleSection('weapons')">
+      <h3>Weapons</h3>
+      <p>Ancient relics and artifacts that amplify his power — mystical and divine.</p>
+    </div>
+    <div class="card" onclick="toggleSection('actors')">
+      <h3>Actors</h3>
+      <p>The incredible cast bringing the Sorcerer Supreme to life on screen.</p>
+    </div>
+  </div>
 
-    <!-- EXTERNAL JS FILE -->
-    <script src="script.js"></script>
+  <!-- ===== INFO SECTIONS ===== -->
+  <div id="powers" class="info-section">
+    <h3>Powers</h3>
+    <p>Doctor Strange commands the energy of the universe through the Mystic Arts. His abilities include teleportation, mirror dimension control, astral projection, and manipulation of time and reality. His magic stems from intense focus and ancient spells taught by The Ancient One.</p>
+    <button onclick="toggleSection('powers')">Close</button>
+  </div>
+
+  <div id="weapons" class="info-section">
+    <h3>Weapons</h3>
+    <p><strong>Eye of Agamotto:</strong> Grants him control over the Time Stone, allowing Strange to reverse or accelerate time events.</p>
+    <p><strong>Cloak of Levitation:</strong> A sentient relic that lets him fly and protects him in battle.</p>
+    <p><strong>Sling Ring:</strong> Enables instantaneous travel between dimensions and universes.</p>
+    <button onclick="toggleSection('weapons')">Close</button>
+  </div>
+
+  <div id="actors" class="info-section">
+    <h3>Actors</h3>
+    <p><strong>Benedict Cumberbatch</strong> masterfully portrays Doctor Strange, bringing intellect and mysticism together. Supporting characters include Wong (Benedict Wong), The Ancient One (Tilda Swinton), and Christine Palmer (Rachel McAdams).</p>
+    <button onclick="toggleSection('actors')">Close</button>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <div class="about">
+    <img src="https://i.pinimg.com/736x/5e/6a/01/5e6a01e41322b9454a88b9d135ec0b91.jpg" alt="Doctor Strange About">
+
+    <div class="about-content">
+      <h3>About Dr. Stephen Strange</h3>
+      <p><strong>Early Life & Tragedy:</strong> Stephen Strange was a world-renowned neurosurgeon, known for his precision and arrogance. His life took a devastating turn after a car accident severely damaged his hands, ending his surgical career.</p>
+      <p><strong>Journey to Kamar-Taj:</strong> Desperate for healing, Strange traveled to Nepal, where he met The Ancient One. She opened his eyes to the hidden world of mysticism and dimensions beyond reality.</p>
+      <p><strong>Mastering the Mystic Arts:</strong> Through rigorous training and an unmatched intellect, Strange learned the secrets of spells, relics, and cosmic energy. His determination transformed him from skeptic to sorcerer.</p>
+      <p><strong>The Sorcerer Supreme:</strong> After defending the Earth from countless threats — from Dormammu to multiversal chaos — Strange rose as the Sorcerer Supreme, protector of the Sanctum Sanctorum and the realms beyond.</p>
+      <button onclick="window.open('https://en.wikipedia.org/wiki/Doctor_Strange_(Marvel_Cinematic_Universe)', '_blank')">Learn More</button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="studio-tag">MARVEL STUDIOS</div>
+    Made by <span>Pushkar Bagade</span> — PRN: 2125UDSM1026
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const sections = document.querySelectorAll('.info-section');
+      sections.forEach(section => {
+        if (section.id === id) {
+          section.classList.toggle('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>

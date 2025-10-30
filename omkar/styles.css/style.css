@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+}
+
+header nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("images/thor.webp") center/cover no-repeat;
+}
+
+.img-thor img {
+    position: relative;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    top: 20%;
+    left: 45%;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+    animation: flash 6s infinite;
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%,
+    55% {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 5rem;
+    color: gold;
+    text-shadow: 0 0 25px gold;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: -0.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #00f;
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border: 2px solid gold;
+    border-radius: 30px;
+    color: gold;
+    text-decoration: none;
+    transition: 0.4s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: gold;
+    color: #000;
+    box-shadow: 0 0 25px gold;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 4rem 10%;
+    text-align: center;
+    line-height: 1.7;
+    background: #111;
+}
+
+.section.dark {
+    background: #0b0b0b;
+}
+
+.section h2 {
+    color: gold;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px gold;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    max-width: 700px;
+}
+
+.section li {
+    margin: 0.6rem 0;
+    color: #ddd;
+}
+
+.section strong {
+    color: gold;
+}
+
+.weapons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.weapon {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 15px;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.weapon h3 {
+    color: gold;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    color: #ccc;
+    font-size: 0.9rem;
+}

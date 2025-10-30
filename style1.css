@@ -1,190 +1,283 @@
 /* =========================
    BODY STYLES
    ========================= */
-body{
-    margin: 0; /* Remove default browser margin */
-    padding: 0; /* Remove default padding */
-    background-color: #000000; /* Black background for gaming theme */
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+
+body {
+    margin: 0;
+    /* Remove default browser margin */
+    padding: 0;
+    /* Remove default padding */
+    background-color: #000000;
+    /* Black background for gaming theme */
+    scroll-behavior: smooth;
+    /* Smooth scrolling for anchor links */
 }
+
 
 /* =========================
    CONTAINER
    ========================= */
-.container{
-    font-family: Arial, Helvetica, sans-serif; /* Base font for the website */
-    color: white; /* Default text color */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    flex-direction: column; /* Stack elements vertically */
-    position: relative; /* Relative positioning for child absolute elements */
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Base font for the website */
+    color: white;
+    /* Default text color */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center items vertically */
+    flex-direction: column;
+    /* Stack elements vertically */
+    position: relative;
+    /* Relative positioning for child absolute elements */
 }
+
 
 /* =========================
    HEADER STYLES
    ========================= */
-header{
-    position: absolute; /* Fixed at top */
-    top:0;
-    left:0;
-    right:0;
-    display: flex; /* Flex layout for header items */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Space between left and right items */
-    padding : 10px 40px; /* Padding inside header */
-    z-index: 999; /* Ensure header is on top of other elements */
-    background-color: #4b4b4b5b; /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Blur effect behind header */
-    position: fixed; /* Fix header position on scroll */
+
+header {
+    position: absolute;
+    /* Fixed at top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* Flex layout for header items */
+    align-items: center;
+    /* Vertically center items */
+    justify-content: space-between;
+    /* Space between left and right items */
+    padding: 10px 40px;
+    /* Padding inside header */
+    z-index: 999;
+    /* Ensure header is on top of other elements */
+    background-color: #4b4b4b5b;
+    /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    /* Blur effect behind header */
+    position: fixed;
+    /* Fix header position on scroll */
 }
+
 
 /* Header left side: logo + button */
-.head-left{
-    display: flex; /* Flexbox for logo and button alignment */
-    align-items: center; /* Center vertically */
+
+.head-left {
+    display: flex;
+    /* Flexbox for logo and button alignment */
+    align-items: center;
+    /* Center vertically */
 }
+
 
 /* Logo image size and margin */
-.head-left img{
+
+.head-left img {
     height: 40px;
     width: 40px;
-    margin-right: 20px; /* Space between logo and button */
+    margin-right: 20px;
+    /* Space between logo and button */
 }
+
 
 /* Join button styles */
-.head-left button{
-    border: none; /* Remove default border */
-    padding: 10px 30px; /* Button padding */
-    border-radius: 20px; /* Rounded edges */
-    font-weight: 700; /* Bold text */
-    cursor: pointer; /* Pointer on hover */
-    transition: 0.3s; /* Smooth hover effect */
+
+.head-left button {
+    border: none;
+    /* Remove default border */
+    padding: 10px 30px;
+    /* Button padding */
+    border-radius: 20px;
+    /* Rounded edges */
+    font-weight: 700;
+    /* Bold text */
+    cursor: pointer;
+    /* Pointer on hover */
+    transition: 0.3s;
+    /* Smooth hover effect */
 }
+
 
 /* Button hover effect */
-.head-left button:hover{
-    opacity: 0.7; /* Slight fade on hover */
+
+.head-left button:hover {
+    opacity: 0.7;
+    /* Slight fade on hover */
 }
+
 
 /* Header right navigation */
-.head-right{
-    display: flex; /* Horizontal links */
-    
+
+.head-right {
+    display: flex;
+    /* Horizontal links */
 }
 
+
 /* Each link style */
-.head-right a{
-    text-decoration: none; /* Remove underline */
-    padding-left: 25px; /* Space between links */
-    color: black; /* Black text */
-    font-size: 15px; /* Font size */
-    background-color: #ffffff; /* White background */
-    border-radius: 18px; /* Rounded edges */
-    padding: 10px 15px; /* Padding inside link */   
-    transition: 0.3s; /* Smooth hover effect */
+
+.head-right a {
+    text-decoration: none;
+    /* Remove underline */
+    padding-left: 25px;
+    /* Space between links */
+    color: black;
+    /* Black text */
+    font-size: 15px;
+    /* Font size */
+    background-color: #ffffff;
+    /* White background */
+    border-radius: 18px;
+    /* Rounded edges */
+    padding: 10px 15px;
+    /* Padding inside link */
+    transition: 0.3s;
+    /* Smooth hover effect */
     margin-right: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }
+
+
 /* head right links hover effect */
-.head-right a:hover{
-    background-color: #000000ff; /* Neon yellow background on hover */
-    color: white;/* White text on hover */
+
+.head-right a:hover {
+    background-color: #000000ff;
+    /* Neon yellow background on hover */
+    color: white;
+    /* White text on hover */
 }
+
 
 /* =========================
    HERO SECTION
    ========================= */
-.hero-section{
-    position: relative; /* Container for absolute positioned elements */
+
+.hero-section {
+    position: relative;
+    /* Container for absolute positioned elements */
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide overflow content */
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Hide overflow content */
 }
 
+
 /* Hero video container */
-.hero-vid{
+
+.hero-vid {
     width: 100%;
     height: 100%;
     position: relative;
     backdrop-filter: blur(33px);
 }
 
+
 /* Hero video itself */
-.hero-video{
+
+.hero-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover entire container */
+    object-fit: cover;
+    /* Cover entire container */
 }
+
 
 /* Overlay info on hero video */
-.hero-info{
-    z-index:1; /* On top of video */
+
+.hero-info {
+    z-index: 1;
+    /* On top of video */
     position: absolute;
-    top:80px;
-    left:50px;
-    text-transform: uppercase; /* Capitalize text */
+    top: 80px;
+    left: 50px;
+    text-transform: uppercase;
+    /* Capitalize text */
 }
 
+
 /* Hero title */
-.hero-info h1{
-    font-size: 120px; /* Big heading */
+
+.hero-info h1 {
+    font-size: 120px;
+    /* Big heading */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 900; /* Extra bold */
+    font-weight: 900;
+    /* Extra bold */
     font-style: normal;
     margin-top: 30px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
+
 /* Hero subtitle */
-.hero-info p{
+
+.hero-info p {
     color: white;
-    max-width: 210px; /* Limit text width */
+    max-width: 210px;
+    /* Limit text width */
 }
 
+
 /* Hero button */
-.hero-info button{
-    background-color: #edff66; /* Neon yellow background */
+
+.hero-info button {
+    background-color: #edff66;
+    /* Neon yellow background */
     border: 2px solid #edff66;
     padding: 10px 40px;
     border-radius: 20px;
     cursor: pointer;
     color: black;
-    transition: 0.3s; /* Smooth hover transition */
+    transition: 0.3s;
+    /* Smooth hover transition */
 }
+
 
 /* Hover effect for hero button */
-.hero-info button:hover{
+
+.hero-info button:hover {
     background-color: transparent;
     color: white;
-    box-shadow: 0 0 15px #edff66; /* Glow effect */
+    box-shadow: 0 0 15px #edff66;
+    /* Glow effect */
 }
 
+
 /* Large decorative text in hero */
-.gaming-text{
+
+.gaming-text {
     font-size: 120px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin:0;
+    margin: 0;
     position: absolute;
     right: 30px;
     bottom: 30px;
     text-transform: uppercase;
 }
 
+
 /* =========================
    NEXT BUTTON
    ========================= */
-.next-btn{
-    width: 170px;
-    height: 170px;
-    background-color: #edff66; /* Neon yellow */
-    border-radius: 50%; /* Circle shape */
+
+.next-btn {
+    width: 150px;
+    height: 150px;
+    background-color: #edff66;
+    /* Neon yellow */
+    border-radius: 50%;
+    /* Circle shape */
     position: absolute;
     left: 45%;
-    bottom: 45%;
+    bottom: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,25 +286,32 @@ header{
     font-weight: bold;
     cursor: pointer;
     z-index: 100;
-    opacity: 0; /* Hidden initially */
+    opacity: 0;
+    /* Hidden initially */
     transition: 0.5s;
     text-decoration: none;
 }
 
+
 /* Hover effect for next button */
-.next-btn:hover{
-    box-shadow: 0 0 30px #edff66; /* Glow effect */
+
+.next-btn:hover {
+    box-shadow: 0 0 30px #edff66;
+    /* Glow effect */
     width: 170px;
     height: 170px;
     opacity: 1;
     box-shadow: 0 0 15px rgb(237, 255, 255, 0.616);
 }
 
+
 /* =========================
    ABOUT SECTION
    ========================= */
-.about-section{
-    width: 100%; /* Typo: should be 'width' */
+
+.about-section {
+    width: 100%;
+    /* Typo: should be 'width' */
     height: 100%;
     margin-top: 200px;
     display: flex;
@@ -220,53 +320,69 @@ header{
     color: white;
 }
 
+
 /* Image container in about section */
-.image-box{
+
+.image-box {
     width: 360px;
-    height:510px;
+    height: 510px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px; /* Rounded image container */
+    border-radius: 50px;
+    /* Rounded image container */
 }
 
+
 /* Image styling */
-.image-box img{
+
+.image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover container */
+    object-fit: cover;
+    /* Cover container */
 }
+
+
 /* About section heading */
-.about-section h1{
-    font-family: Impact , Haettenschweiler , 'Arial Narrow Bold',sans-serif;
+
+.about-section h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 900;
     font-size: 100px;
     max-width: 1150px;
     text-align: center;
     margin: 25px 0;
     text-transform: uppercase;
-    background: linear-gradient(to right, #4acfee , #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee); /* Gradient text */
+    background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
+    /* Gradient text */
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite; /* Animated gradient */
+    animation: animate-gradient 2.5s linear infinite;
+    /* Animated gradient */
 }
 
+
 /* Gradient animation keyframes */
+
 @keyframes animate-gradient {
-    to{
+    to {
         background-position: 200%;
     }
 }
 
+
 /* Small headings in about section */
-.about-section h4{
+
+.about-section h4 {
     margin-top: 50px;
     margin-bottom: 0px;
 }
-.about-section h5{
+
+.about-section h5 {
     margin-top: 5px;
     color: gray;
     max-width: 425px;
@@ -274,15 +390,18 @@ header{
     line-height: 25px;
 }
 
-.stones-img{
+.stones-img {
     position: absolute;
     margin-top: 22%;
     width: 500px;
 }
+
+
 /* =========================
    INFO SECTION / CARDS
    ========================= */
-.info-section{
+
+.info-section {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -290,30 +409,35 @@ header{
     margin-top: 100px;
 }
 
-.info-section h3{
+.info-section h3 {
     margin-bottom: 0;
 }
-.info-section p{
+
+.info-section p {
     margin-top: 5px;
     color: gray;
     max-width: 400px;
     line-height: 25px;
 }
 
+
 /* Card container grid */
-.info-cards{
+
+.info-cards {
     display: grid;
     grid-template-columns: auto auto;
-    gap:20px;
-    width:100%;
+    gap: 20px;
+    width: 100%;
     height: 100%;
     border: 0px solid gray;
     border-radius: 20px;
     transition: 0.5s;
 }
 
+
 /* Individual hero card */
-.card{
+
+.card {
     position: relative;
     width: auto;
     height: 40vh;
@@ -327,16 +451,18 @@ header{
     box-sizing: border-box;
 }
 
+
 /* Card heading */
-.card h1{
+
+.card h1 {
     position: absolute;
     margin: 0;
     top: 10px;
     left: 5%;
     font-size: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    z-index:1;
-    background: linear-gradient(to right, #4acfee , #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
+    z-index: 1;
+    background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -345,8 +471,10 @@ header{
     max-width: 1000px;
 }
 
+
 /* Card description text */
-.card p{
+
+.card p {
     position: absolute;
     top: 80px;
     left: 5%;
@@ -358,15 +486,19 @@ header{
     font-weight: 500;
 }
 
+
 /* Card video */
-.card video{
+
+.card video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
 /* Card button */
-.card button{
+
+.card button {
     position: absolute;
     bottom: 5%;
     left: 5%;
@@ -382,30 +514,38 @@ header{
     font-weight: 700;
 }
 
+
 /* Card hover effect */
-.card button:hover{
+
+.card button:hover {
     box-shadow: 0 0 15px lightgray;
     opacity: 0.7px;
     background-color: #ffffff;
     color: black;
 }
-.card:hover{
+
+.card:hover {
     box-shadow: 0 0 15px rgb(213, 213, 213);
 }
 
+
 /* Specific grid card spans */
-.card:nth-child(1){
+
+.card:nth-child(1) {
     grid-column: span 2;
 }
-.card:nth-child(2){
+
+.card:nth-child(2) {
     grid-row: span 2;
     height: 83vh;
 }
 
+
 /* =========================
    CONTACT SECTION
    ========================= */
-.contact-section{
+
+.contact-section {
     position: relative;
     width: 100%;
     margin-top: 100px;
@@ -416,8 +556,10 @@ header{
     margin-bottom: 100px;
 }
 
+
 /* Contact images */
-.contact-section .img1{
+
+.contact-section .img1 {
     position: absolute;
     top: 10%;
     right: 100px;
@@ -425,7 +567,8 @@ header{
     transition: 0.3s;
     clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);
 }
-.contact-section .img2{
+
+.contact-section .img2 {
     position: absolute;
     left: 200px;
     top: 10px;
@@ -433,7 +576,8 @@ header{
     transition: 0.3s;
     clip-path: polygon(50% 0%, 100% 47%, 82% 100%, 18% 100%, 0 46%);
 }
-.contact-section .img3{
+
+.contact-section .img3 {
     position: absolute;
     left: 15%;
     bottom: 0%;
@@ -442,37 +586,46 @@ header{
     transition: 0.3s;
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
+
+
 /* hover effect on image */
-.contact-section .img1:hover{
+
+.contact-section .img1:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
 
-.contact-section .img2:hover{
+.contact-section .img2:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
-.contact-section .img3:hover{
+
+.contact-section .img3:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+
 /* Contact text */
-.contact-section p{
+
+.contact-section p {
     margin-top: 100px;
 }
-.contact-section h1{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+.contact-section h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 70px;
     max-width: 550px;
     text-align: center;
-    background: linear-gradient(to right, #4acfee , #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
+    background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
 }
-.contact-section button{
+
+.contact-section button {
     padding: 10px 25px;
     border: 1px solid gray;
     background-color: #0f1217;
@@ -482,32 +635,40 @@ header{
     cursor: pointer;
     transition: 0.3s;
 }
-.contact-section button:hover{
+
+.contact-section button:hover {
     box-shadow: 0 0 15px lightgray;
     opacity: 0.7px;
 }
 
+
 /* =========================
    FOOTER
    ========================= */
-.footer{
-    width:100%;
+
+.footer {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(211, 211, 211, 0.088); /* Transparent background */
-    backdrop-filter: blur(10px); /* Blur behind footer */
+    background-color: rgba(211, 211, 211, 0.088);
+    /* Transparent background */
+    backdrop-filter: blur(10px);
+    /* Blur behind footer */
     height: 100px;
 }
-.footer p{
+
+.footer p {
     margin: 0 20px;
 }
-.footer ul{
+
+.footer ul {
     display: flex;
     list-style: none;
     margin-right: 140px;
 }
-.footer a{
+
+.footer a {
     text-decoration: none;
     color: white;
     padding: 7px 7px;
@@ -517,38 +678,46 @@ header{
     margin: 0 10px;
 }
 
+
 /* =========================
    ANIMATION CLASSES
    ========================= */
 
+
 /* Auto blur effect for elements */
-.autoBlur{
+
+.autoBlur {
     animation: autoBlurAnimation linear both;
     animation-timeline: view();
 }
-@keyframes autoBlurAnimation{
-    0%{
+
+@keyframes autoBlurAnimation {
+    0% {
         filter: blur(40px);
     }
-    40%, 60%{
+    40%,
+    60% {
         filter: blur(0);
         transform: translateY(0px);
         opacity: 1;
     }
-    100%{
+    100% {
         filter: blur(40px);
         transform: translateY(-200px);
         opacity: 0;
     }
 }
 
+
 /* Full screen animation */
-.autoTakeFull{
+
+.autoTakeFull {
     animation: autoTakeFullAnimation both;
     animation-timeline: view(70% 65%);
 }
-@keyframes autoTakeFullAnimation{
-    to{
+
+@keyframes autoTakeFullAnimation {
+    to {
         width: 100%;
         height: 100vh;
         border-radius: 0;
@@ -556,108 +725,108 @@ header{
     }
 }
 
+
 /* Auto display animation */
-.autoDisplay{
+
+.autoDisplay {
     animation: autoDisplayAnimation both;
     animation-timeline: view(70% 5%);
 }
-@keyframes autoDisplayAnimation{
-    from{
+
+@keyframes autoDisplayAnimation {
+    from {
         opacity: 0;
         transform: translateY(200px) scale(0.3);
-    } 
-    to{
+    }
+    to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 }
 
 
-
-
 /* to make mobile screen responsive site  */
-@media only screen and (max-width: 650px){
-    
-    header{
+
+@media only screen and (max-width: 650px) {
+    header {
         padding: 0 10px;
     }
-    .head-left button{
+    .head-left button {
         display: none;
     }
-    .head-right a{
+    .head-right a {
         font-size: 12px;
         padding: 0 5px;
     }
-    .hero-info{
+    .hero-info {
         left: 5%;
     }
-    .hero-section h1{
+    .hero-section h1 {
         font-size: 90px;
     }
-    .next-btn{
+    .next-btn {
         left: 25%;
         top: 40%;
     }
-    .about-section{
+    .about-section {
         margin: 0;
     }
-    .about-section h1{
+    .about-section h1 {
         font-size: 50px;
         margin-left: 4px;
-
     }
-    .section-info h3{
+    .section-info h3 {
         font-size: 26px;
         margin-left: 50px;
     }
-    .section-info p{
+    .section-info p {
         font-size: 18px;
         margin-left: 28px;
     }
-    .image-box{
+    .image-box {
         width: 300px;
         height: 500px;
     }
-    .about-section h4, .about-section h5{
+    .about-section h4,
+    .about-section h5 {
         max-width: 350px;
         text-align: center;
     }
-    .contact-section  .img1{
+    .contact-section .img1 {
         width: 120px;
         height: 170px;
         right: 0;
         top: 100px;
     }
-    .contact-section .img2{
+    .contact-section .img2 {
         top: 30px;
         left: -40px;
         width: 150px;
         height: 120px;
     }
-    .contact-section .img3{
+    .contact-section .img3 {
         left: -30px;
         bottom: 0;
         width: 150px;
         height: 120px;
     }
-    .contact-section h1{
+    .contact-section h1 {
         font-size: 40px;
         max-width: 250px;
     }
-    .footer p{
+    .footer p {
         display: none;
-
     }
-    .footer ul{
+    .footer ul {
         margin-left: 50px;
         border: none;
         text-decoration: none;
     }
-    .stones-img{
+    .stones-img {
         max-width: 450px;
         margin-top: 300px;
     }
-    .info-card{
+    .info-card {
         max-width: 250px;
     }
 }
